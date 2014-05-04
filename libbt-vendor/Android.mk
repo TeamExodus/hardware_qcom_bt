@@ -73,6 +73,11 @@ LOCAL_SHARED_LIBRARIES += libbtnv
 endif
 endif
 
+ifneq ($(QCPATH),)
+LOCAL_CFLAGS += -DBT_NV_SUPPORT
+LOCAL_SHARED_LIBRARIES += libbtnv
+endif
+
 ifneq ($(BOARD_ANT_WIRELESS_DEVICE),)
 LOCAL_CFLAGS += -DENABLE_ANT
 endif
