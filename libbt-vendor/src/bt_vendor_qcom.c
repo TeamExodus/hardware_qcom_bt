@@ -1168,7 +1168,7 @@ userial_open:
                     lpm_result = BT_VND_OP_RESULT_FAIL;
                 }
 
-                q.cb->lpm_cb(lpm_result);
+                q->cb->lpm_cb(lpm_result);
             }
             break;
 
