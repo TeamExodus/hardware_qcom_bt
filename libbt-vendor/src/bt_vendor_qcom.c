@@ -941,7 +941,7 @@ userial_open:
                                    ALOGI("Failed to read BD address. Use the one from bluedroid stack/ftm");
                                 }
 #endif
-                                if(rome_soc_init(fd, (char*)q->bdaddr)<0) {
+                                if(rome_soc_init(fd, (char*)q.bdaddr)<0) {
                                     retval = -1;
                                 } else {
                                     ALOGV("rome_soc_init is completed");
@@ -1168,7 +1168,7 @@ userial_open:
                     lpm_result = BT_VND_OP_RESULT_FAIL;
                 }
 
-                q->cb->lpm_cb(lpm_result);
+                q.cb->lpm_cb(lpm_result);
             }
             break;
 
