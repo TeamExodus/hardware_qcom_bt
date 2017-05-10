@@ -941,7 +941,7 @@ userial_open:
                                    ALOGI("Failed to read BD address. Use the one from bluedroid stack/ftm");
                                 }
 #endif
-                                if(rome_soc_init(fd, (char*)q->bdaddr)<0) {
+                                if(rome_soc_init(fd, (char*)q.bdaddr)<0) {
                                     retval = -1;
                                 } else {
                                     ALOGV("rome_soc_init is completed");
